@@ -5,15 +5,42 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    // Define a default keymap here.
-    // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        layer_0 {
             bindings = <
-                &kp N1 &kp N2    &kp N3 &kp N4
-                &kp A  &kp B     &kp C  &kp D
+         &kp Q  &kp W  &kp E                &kp R      &kp T                   &kp Y                &kp U  &kp I      &kp O    &kp P
+         &kp A  &kp S  &kp D                &kp F      &kp G                   &kp H                &kp J  &kp K      &kp L    &kp SEMI
+&kp TAB  &kp Z  &kp X  &kp C                &kp V      &kp B                   &kp N                &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp APOSTROPHE
+                       &mt LEFT_WIN ESCAPE  &kp LCTRL  &mt LEFT_SHIFT SPACE    &mt ENTER BACKSPACE  &mo 1  &mo 2
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans     &trans
+        &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7     &kp N8     &kp N9     &kp N0
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp MINUS  &kp EQUAL  &kp GRAVE  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans     &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+        &trans     &trans  &trans  &trans  &trans    &trans  &trans    &kp UP    &trans     &trans
+        &kp LCTRL  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&trans  &trans     &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans     &trans  &trans
+                           &trans  &trans  &trans    &trans  &trans    &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+        &trans     &kp Q  &kp W   &kp E   &mt T R    &trans  &trans  &trans  &trans  &trans
+        &kp LSHFT  &kp A  &kp S   &kp D   &mt G F    &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL  &kp Z  &kp X   &kp C   &mt B V    &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans  &trans     &trans  &trans  &trans
             >;
         };
     };
